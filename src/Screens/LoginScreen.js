@@ -1,5 +1,5 @@
 import { Box, Image, VStack, Input, Button, Text, Pressable } from 'native-base';
-import { AntDesign, Ionicons  } from '@expo/vector-icons';
+import { AntDesign  } from '@expo/vector-icons';
 
 import coverImg from '../../assets/cover.png';
 import Colors from '../color';
