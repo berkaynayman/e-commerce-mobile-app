@@ -1,11 +1,12 @@
 import { NativeBaseProvider } from 'native-base';
 
-import LoginScreen from './src/Screens/LoginScreen';
+import PaymentScreen from './src/Screens/PaymentScreen';
+
 
 export default function App() {
   return (
       <NativeBaseProvider>
-        <LoginScreen />
+        <PaymentScreen />
       </NativeBaseProvider>
   );
 }
