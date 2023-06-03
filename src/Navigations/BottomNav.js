@@ -36,7 +36,7 @@ const BottomNav = () => {
                 options={{
                     tabBarIcon:({focused}) => (
                         <Center>
-                            <Entypo name="home" size={24} color={Colors.black} />
+                            <Entypo name="home" size={24} color={focused ? Colors.main : Colors.black} />
                         </Center>
                     )
                 }}
@@ -47,7 +47,7 @@ const BottomNav = () => {
                     tabBarButton: (props) => <CustomTab {...props} />,
                     tabBarIcon:({focused}) => (
                         <Center>
-                            <FontAwesome name="shopping-basket" size={24} color={Colors.white} />
+                            <FontAwesome name="shopping-basket" size={24} color={focused ? Colors.deepGray : Colors.black} />
                         </Center>
                     )
                 }}
