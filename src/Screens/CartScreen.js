@@ -1,7 +1,9 @@
-import { Box, Button, Center, HStack, ScrollView, Text } from 'native-base';
+import { Box, Button, Center, HStack, Text } from 'native-base';
 import CartEmpty from '../Components/CartEmpty';
 import _Button from '../Components/_Button';
 import CartIterms from '../Components/CartIterms';
+import { ScrollView } from 'react-native-virtualized-view'
+
 
 import Colors from "../color"
 
