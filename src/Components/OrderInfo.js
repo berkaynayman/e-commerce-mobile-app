@@ -30,13 +30,19 @@ const OrderInfo = ({icon, title, subTitle, text, success, danger}) => {
                 { subTitle }
             </Text>
             <Text fontSize={13} textAlign="center" italic color={Colors.black}>
-                { text }
+                { text.slice(0, 27) }
             </Text>
             {/* Status */}
             {
                 success && (
-                    <Center py={2} mt={2} rounded={5} w="full" bgColor={Colors.blue}>
-                        <Text fontSize={12} color={Colors.white}>
+                    <Center py={2} mt={2} rounded={5} w="full" bgColor={Colors.main}>
+                        <Text
+                            fontSize={12}
+                            style={{
+                                color: Colors.white,
+                                fontWeight: "bold"
+                            }}
+                        >
                             Paid on May 30 2023
                         </Text>
                     </Center>
@@ -45,7 +51,13 @@ const OrderInfo = ({icon, title, subTitle, text, success, danger}) => {
             {
                 danger && (
                     <Center py={2} mt={2} rounded={5} w="full" bgColor={Colors.red}>
-                        <Text fontSize={12} color={Colors.white}>
+                        <Text
+                            fontSize={12}
+                            style={{
+                                color: Colors.white,
+                                fontWeight: "bold"
+                            }}
+                        >
                             Not Deliver
                         </Text>
                     </Center>
