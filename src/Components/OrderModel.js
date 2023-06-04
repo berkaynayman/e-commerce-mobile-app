@@ -2,6 +2,7 @@ import { Button, Center, HStack, Image, Modal, Pressable, Text, VStack } from "n
 import _Button from "./_Button";
 import Colors from "../color";
 import { useState } from "react";
+import { useNavigation } from "@react-navigation/native";
 
 const OrdersInfos = [
     {
@@ -28,7 +29,7 @@ const OrdersInfos = [
 
 const OrderModel = () => {
     const [showModel, setShowModel] = useState(false);
-
+    const navigation = useNavigation();
     return (
         <Center>
             <_Button
@@ -91,13 +92,16 @@ const OrderModel = () => {
                                 color: Colors.white,
                                 fontWeight: "bold"
                             }}
-                            onPress={() => setShowModel(false)}
+                            onPress={() => {
+                                navigation.navigate("Home");
+                                setShowModel(false);
+                            }}
                             _pressed={{
                                 bg: Colors.black
                             }}
                             rounded="xl"
                         >
-                            PLACE AN ORDER
+                            PAY LATER
                         </Button>
                     </Modal.Footer>
                 </Modal.Content>

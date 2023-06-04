@@ -4,7 +4,7 @@ import { AntDesign  } from '@expo/vector-icons';
 import coverImg from '../../assets/cover.png';
 import Colors from '../color';
 
-function LoginScreen() {
+function LoginScreen({ navigation }) {
     return(
         <Box flex={1} bg={Colors.black}>
             <Image
@@ -54,12 +54,20 @@ function LoginScreen() {
                         rounded="8"
                         bg={Colors.main}
                     >
-                        <Text fontSize="16" fontWeight="bold" color={Colors.white}>
+                        <Text
+                            fontSize="16" fontWeight="bold"
+                            color={Colors.white}
+                            onPress={() => navigation.navigate("Bottom")}
+                        >
                             LOGIN
                         </Text>
                     </Button>
                     <Pressable>
-                        <Text color={Colors.deepestGray} fontWeight="bold">
+                        <Text
+                            color={Colors.deepestGray}
+                            fontWeight="bold"
+                            onPress={() => navigation.navigate("Register")}
+                        >
                             SIGN UP
                         </Text>
                     </Pressable>

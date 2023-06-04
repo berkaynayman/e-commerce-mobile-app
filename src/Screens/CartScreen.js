@@ -3,11 +3,13 @@ import CartEmpty from '../Components/CartEmpty';
 import _Button from '../Components/_Button';
 import CartIterms from '../Components/CartIterms';
 import { ScrollView } from 'react-native-virtualized-view'
+import { useNavigation } from '@react-navigation/native';
 
 
 import Colors from "../color"
 
 function CartScreen() {
+    const navigation = useNavigation();
     return(
         <Box flex={1} safeAreaTop bgColor={Colors.subGreen}>
             <Center w={'full'} py={5}>
@@ -53,6 +55,7 @@ function CartScreen() {
 
                 <Center p={5}>
                     <_Button
+                        onPress={() => navigation.navigate("Shipping")}
                         bg={Colors.black}
                         color={Colors.white}
                     >

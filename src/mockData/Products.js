@@ -15,7 +15,7 @@ const products = [
         image: "https://rukminim1.flixcart.com/image/612/612/xif0q/shoe/g/c/o/9-rockey-9-magnolia-white-original-imaggutpbvcczyhf.jpeg?q=70",
         description: "Culpa pariatur labore irure nisi culpa consectetur ex Lorem.",
         price: 100,
-        countInStock: 10,
+        countInStock: 0,
         rating: 3,
         numReviews: 2
     },

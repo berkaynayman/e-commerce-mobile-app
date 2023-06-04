@@ -3,8 +3,11 @@ import Rating from "./Rating"
 
 import Colors from "../color"
 import products from "../mockData/Products"
+import { useNavigation } from "@react-navigation/native"
 
 function HomeProducts(){
+    const navigation = useNavigation();
+
     return(
         <ScrollView flex={1} showsVerticalScrollIndicator={false}>
             <Flex
@@ -16,6 +19,7 @@ function HomeProducts(){
                 {
                     products.map(product => (
                         <Pressable
+                            onPress={() => navigation.navigate("Single", product)}
                             key={product._id}
                             w="47%"
                             bgColor={Colors.white}

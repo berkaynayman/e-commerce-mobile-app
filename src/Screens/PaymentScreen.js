@@ -2,6 +2,7 @@ import { Box, Center, Text, ScrollView, VStack, HStack, Image } from 'native-bas
 import _Button from '../Components/_Button';
 import Colors from '../color';
 import { FontAwesome } from "@expo/vector-icons";
+import { useNavigation } from '@react-navigation/native';
 
 const paymentMethods = [
     {   
@@ -22,6 +23,7 @@ const paymentMethods = [
 ]
 
 function ShippingScreen() {
+    const navigation = useNavigation();
     return(
         <Box flex={1} safeAreaTop bgColor={Colors.main} py={5}>
             {/* Header */}
@@ -63,7 +65,11 @@ function ShippingScreen() {
                                 </HStack>
                             ))
                         }
-                        <_Button bg={Colors.main} color={Colors.white}>
+                        <_Button
+                            onPress={() => navigation.navigate("PlaceOrder")}
+                            bg={Colors.main}
+                            color={Colors.white}
+                        >
                             CONTINUE
                         </_Button>
                         <Text italic textAlign="center">
